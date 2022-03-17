@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+</head>
+<body>
+<header>
+    <div class="container nav-actions">
+        <a href="#">
+            <div class="nav-actions-logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+        </a>
+
+        <div class="nav-actions-actions">
+            <div class="d-flex nav-actions-actions-item">
+                <div class="nav-actions-actions-item-svg">
+                    <svg width="36" height="39" viewBox="0 0 36 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.4675 23.5808C27.7294 22.7693 26.8391 22.3355 25.8955 22.3355C24.9596 22.3355 24.0617 22.7613 23.2931 23.5727L20.8886 26.1034C20.6907 25.9909 20.4929 25.8865 20.3027 25.7821C20.0287 25.6375 19.77 25.5009 19.5493 25.3563C17.297 23.8459 15.25 21.8776 13.2868 19.3308C12.3357 18.0614 11.6965 16.9929 11.2323 15.9083C11.8563 15.3058 12.4346 14.6791 12.9977 14.0766C13.2107 13.8516 13.4238 13.6186 13.6369 13.3937C15.2348 11.7066 15.2348 9.52133 13.6369 7.8342L11.5595 5.64093C11.3236 5.39187 11.0801 5.13479 10.8518 4.8777C10.3953 4.3796 9.91588 3.86542 9.42127 3.38338C8.68316 2.61212 7.80047 2.20239 6.87213 2.20239C5.94379 2.20239 5.04588 2.61212 4.28495 3.38338C4.27734 3.39142 4.27734 3.39142 4.26973 3.39945L1.68254 6.1551C0.708545 7.18345 0.153061 8.43675 0.0313114 9.89089C-0.151313 12.2368 0.503092 14.422 1.00531 15.8521C2.23803 19.3629 4.07949 22.6167 6.82647 26.1034C10.1594 30.3052 14.1695 33.6232 18.7503 35.9611C20.5005 36.8368 22.8366 37.8732 25.4466 38.0499C25.6064 38.058 25.7738 38.066 25.926 38.066C27.6837 38.066 29.16 37.3992 30.3166 36.0736C30.3242 36.0575 30.3394 36.0495 30.347 36.0334C30.7427 35.5273 31.1993 35.0693 31.6787 34.5793C32.0059 34.2499 32.3407 33.9044 32.6679 33.5429C33.4212 32.7154 33.8169 31.7513 33.8169 30.7631C33.8169 29.7669 33.4136 28.8109 32.6451 28.0075L28.4675 23.5808ZM31.1917 32.0405C31.1841 32.0405 31.1841 32.0486 31.1917 32.0405C30.8949 32.3779 30.5905 32.6832 30.2633 33.0207C29.7687 33.5188 29.2665 34.041 28.7947 34.6275C28.0262 35.4951 27.1207 35.9049 25.9336 35.9049C25.8195 35.9049 25.6977 35.9049 25.5836 35.8968C23.3236 35.7442 21.2234 34.8122 19.6483 34.0169C15.3414 31.8156 11.5595 28.6904 8.41683 24.7296C5.82204 21.4277 4.0871 18.3748 2.93809 15.0969C2.23042 13.0964 1.9717 11.5379 2.08584 10.0676C2.16193 9.12767 2.50436 8.34837 3.13593 7.68155L5.73073 4.94197C6.10358 4.57241 6.49927 4.37156 6.88735 4.37156C7.36674 4.37156 7.75482 4.67685 7.99832 4.93394C8.00593 4.94197 8.01354 4.95001 8.02114 4.95804C8.48532 5.41598 8.92666 5.88998 9.39083 6.39612C9.62672 6.65321 9.87022 6.91029 10.1137 7.17541L12.1911 9.36868C12.9977 10.2203 12.9977 11.0076 12.1911 11.8592C11.9704 12.0922 11.7573 12.3252 11.5367 12.5501C10.8975 13.2411 10.2887 13.8838 9.62672 14.5104C9.6115 14.5265 9.59628 14.5345 9.58867 14.5506C8.93427 15.2415 9.05602 15.9164 9.19299 16.3743C9.2006 16.3984 9.20821 16.4225 9.21582 16.4466C9.75608 17.8284 10.517 19.1299 11.6736 20.6805L11.6812 20.6885C13.7814 23.4201 15.9958 25.5491 18.4384 27.18C18.7504 27.3889 19.0699 27.5576 19.3743 27.7182C19.6483 27.8629 19.907 27.9994 20.1276 28.144C20.1581 28.1601 20.1885 28.1842 20.219 28.2003C20.4777 28.3369 20.7212 28.4011 20.9723 28.4011C21.6039 28.4011 21.9995 27.9834 22.1289 27.8468L24.7313 25.0992C24.99 24.826 25.4009 24.4966 25.8803 24.4966C26.3521 24.4966 26.7402 24.81 26.9761 25.0831C26.9837 25.0911 26.9837 25.0911 26.9913 25.0992L31.1841 29.5259C31.9678 30.3454 31.9678 31.1889 31.1917 32.0405Z"
+                              fill="#0092FF"/>
+                        <path d="M19.4579 9.05442C21.4515 9.40791 23.2626 10.4041 24.7083 11.9306C26.1541 13.457 27.0901 15.3691 27.4325 17.474C27.5162 18.0042 27.9499 18.3738 28.4445 18.3738C28.5054 18.3738 28.5587 18.3658 28.6196 18.3577C29.1826 18.2613 29.5555 17.699 29.4642 17.1044C29.0533 14.5577 27.9119 12.2359 26.1693 10.3961C24.4268 8.55631 22.2277 7.35122 19.8155 6.91738C19.2524 6.82098 18.7274 7.21464 18.6285 7.80112C18.5295 8.3876 18.8948 8.95801 19.4579 9.05442Z"
+                              fill="#0092FF"/>
+                        <path d="M35.9839 16.7914C35.3066 12.5977 33.4347 8.78158 30.5584 5.74475C27.6821 2.70791 24.0676 0.731557 20.0955 0.0165351C19.5401 -0.0879064 19.015 0.313792 18.9161 0.900271C18.8248 1.49478 19.1976 2.04913 19.7607 2.15357C23.3067 2.78825 26.5407 4.56376 29.1126 7.2712C31.6846 9.98668 33.3587 13.4011 33.9598 17.1449C34.0435 17.6752 34.4772 18.0447 34.9718 18.0447C35.0327 18.0447 35.086 18.0367 35.1469 18.0287C35.7023 17.9403 36.0828 17.3779 35.9839 16.7914Z"
+                              fill="#0092FF"/>
+                    </svg>
+                </div>
+                <div class="nav-actions-actions-item-svg-info">
+                    <div class="nav-actions-actions-item-svg-info-text">
+                        Email Support :
+                    </div>
+                    <div class="nav-actions-actions-item-svg-info-link">
+                        info@subsco.com
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex nav-actions-actions-item">
+                <div class="nav-actions-actions-item-svg">
+                    <svg width="36" height="39" viewBox="0 0 36 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.4675 23.5808C27.7294 22.7693 26.8391 22.3355 25.8955 22.3355C24.9596 22.3355 24.0617 22.7613 23.2931 23.5727L20.8886 26.1034C20.6907 25.9909 20.4929 25.8865 20.3027 25.7821C20.0287 25.6375 19.77 25.5009 19.5493 25.3563C17.297 23.8459 15.25 21.8776 13.2868 19.3308C12.3357 18.0614 11.6965 16.9929 11.2323 15.9083C11.8563 15.3058 12.4346 14.6791 12.9977 14.0766C13.2107 13.8516 13.4238 13.6186 13.6369 13.3937C15.2348 11.7066 15.2348 9.52133 13.6369 7.8342L11.5595 5.64093C11.3236 5.39187 11.0801 5.13479 10.8518 4.8777C10.3953 4.3796 9.91588 3.86542 9.42127 3.38338C8.68316 2.61212 7.80047 2.20239 6.87213 2.20239C5.94379 2.20239 5.04588 2.61212 4.28495 3.38338C4.27734 3.39142 4.27734 3.39142 4.26973 3.39945L1.68254 6.1551C0.708545 7.18345 0.153061 8.43675 0.0313114 9.89089C-0.151313 12.2368 0.503092 14.422 1.00531 15.8521C2.23803 19.3629 4.07949 22.6167 6.82647 26.1034C10.1594 30.3052 14.1695 33.6232 18.7503 35.9611C20.5005 36.8368 22.8366 37.8732 25.4466 38.0499C25.6064 38.058 25.7738 38.066 25.926 38.066C27.6837 38.066 29.16 37.3992 30.3166 36.0736C30.3242 36.0575 30.3394 36.0495 30.347 36.0334C30.7427 35.5273 31.1993 35.0693 31.6787 34.5793C32.0059 34.2499 32.3407 33.9044 32.6679 33.5429C33.4212 32.7154 33.8169 31.7513 33.8169 30.7631C33.8169 29.7669 33.4136 28.8109 32.6451 28.0075L28.4675 23.5808ZM31.1917 32.0405C31.1841 32.0405 31.1841 32.0486 31.1917 32.0405C30.8949 32.3779 30.5905 32.6832 30.2633 33.0207C29.7687 33.5188 29.2665 34.041 28.7947 34.6275C28.0262 35.4951 27.1207 35.9049 25.9336 35.9049C25.8195 35.9049 25.6977 35.9049 25.5836 35.8968C23.3236 35.7442 21.2234 34.8122 19.6483 34.0169C15.3414 31.8156 11.5595 28.6904 8.41683 24.7296C5.82204 21.4277 4.0871 18.3748 2.93809 15.0969C2.23042 13.0964 1.9717 11.5379 2.08584 10.0676C2.16193 9.12767 2.50436 8.34837 3.13593 7.68155L5.73073 4.94197C6.10358 4.57241 6.49927 4.37156 6.88735 4.37156C7.36674 4.37156 7.75482 4.67685 7.99832 4.93394C8.00593 4.94197 8.01354 4.95001 8.02114 4.95804C8.48532 5.41598 8.92666 5.88998 9.39083 6.39612C9.62672 6.65321 9.87022 6.91029 10.1137 7.17541L12.1911 9.36868C12.9977 10.2203 12.9977 11.0076 12.1911 11.8592C11.9704 12.0922 11.7573 12.3252 11.5367 12.5501C10.8975 13.2411 10.2887 13.8838 9.62672 14.5104C9.6115 14.5265 9.59628 14.5345 9.58867 14.5506C8.93427 15.2415 9.05602 15.9164 9.19299 16.3743C9.2006 16.3984 9.20821 16.4225 9.21582 16.4466C9.75608 17.8284 10.517 19.1299 11.6736 20.6805L11.6812 20.6885C13.7814 23.4201 15.9958 25.5491 18.4384 27.18C18.7504 27.3889 19.0699 27.5576 19.3743 27.7182C19.6483 27.8629 19.907 27.9994 20.1276 28.144C20.1581 28.1601 20.1885 28.1842 20.219 28.2003C20.4777 28.3369 20.7212 28.4011 20.9723 28.4011C21.6039 28.4011 21.9995 27.9834 22.1289 27.8468L24.7313 25.0992C24.99 24.826 25.4009 24.4966 25.8803 24.4966C26.3521 24.4966 26.7402 24.81 26.9761 25.0831C26.9837 25.0911 26.9837 25.0911 26.9913 25.0992L31.1841 29.5259C31.9678 30.3454 31.9678 31.1889 31.1917 32.0405Z"
+                              fill="#0092FF"/>
+                        <path d="M19.4579 9.05442C21.4515 9.40791 23.2626 10.4041 24.7083 11.9306C26.1541 13.457 27.0901 15.3691 27.4325 17.474C27.5162 18.0042 27.9499 18.3738 28.4445 18.3738C28.5054 18.3738 28.5587 18.3658 28.6196 18.3577C29.1826 18.2613 29.5555 17.699 29.4642 17.1044C29.0533 14.5577 27.9119 12.2359 26.1693 10.3961C24.4268 8.55631 22.2277 7.35122 19.8155 6.91738C19.2524 6.82098 18.7274 7.21464 18.6285 7.80112C18.5295 8.3876 18.8948 8.95801 19.4579 9.05442Z"
+                              fill="#0092FF"/>
+                        <path d="M35.9839 16.7914C35.3066 12.5977 33.4347 8.78158 30.5584 5.74475C27.6821 2.70791 24.0676 0.731557 20.0955 0.0165351C19.5401 -0.0879064 19.015 0.313792 18.9161 0.900271C18.8248 1.49478 19.1976 2.04913 19.7607 2.15357C23.3067 2.78825 26.5407 4.56376 29.1126 7.2712C31.6846 9.98668 33.3587 13.4011 33.9598 17.1449C34.0435 17.6752 34.4772 18.0447 34.9718 18.0447C35.0327 18.0447 35.086 18.0367 35.1469 18.0287C35.7023 17.9403 36.0828 17.3779 35.9839 16.7914Z"
+                              fill="#0092FF"/>
+                    </svg>
+                </div>
+                <div class="nav-actions-actions-item-svg-info">
+                    <div class="nav-actions-actions-item-svg-info-text">
+                        Email Support :
+                    </div>
+                    <div class="nav-actions-actions-item-svg-info-link">
+                        info@subsco.com
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex nav-actions-actions-item">
+                <div class="nav-actions-actions-item-svg">
+                    <svg width="36" height="39" viewBox="0 0 36 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.4675 23.5808C27.7294 22.7693 26.8391 22.3355 25.8955 22.3355C24.9596 22.3355 24.0617 22.7613 23.2931 23.5727L20.8886 26.1034C20.6907 25.9909 20.4929 25.8865 20.3027 25.7821C20.0287 25.6375 19.77 25.5009 19.5493 25.3563C17.297 23.8459 15.25 21.8776 13.2868 19.3308C12.3357 18.0614 11.6965 16.9929 11.2323 15.9083C11.8563 15.3058 12.4346 14.6791 12.9977 14.0766C13.2107 13.8516 13.4238 13.6186 13.6369 13.3937C15.2348 11.7066 15.2348 9.52133 13.6369 7.8342L11.5595 5.64093C11.3236 5.39187 11.0801 5.13479 10.8518 4.8777C10.3953 4.3796 9.91588 3.86542 9.42127 3.38338C8.68316 2.61212 7.80047 2.20239 6.87213 2.20239C5.94379 2.20239 5.04588 2.61212 4.28495 3.38338C4.27734 3.39142 4.27734 3.39142 4.26973 3.39945L1.68254 6.1551C0.708545 7.18345 0.153061 8.43675 0.0313114 9.89089C-0.151313 12.2368 0.503092 14.422 1.00531 15.8521C2.23803 19.3629 4.07949 22.6167 6.82647 26.1034C10.1594 30.3052 14.1695 33.6232 18.7503 35.9611C20.5005 36.8368 22.8366 37.8732 25.4466 38.0499C25.6064 38.058 25.7738 38.066 25.926 38.066C27.6837 38.066 29.16 37.3992 30.3166 36.0736C30.3242 36.0575 30.3394 36.0495 30.347 36.0334C30.7427 35.5273 31.1993 35.0693 31.6787 34.5793C32.0059 34.2499 32.3407 33.9044 32.6679 33.5429C33.4212 32.7154 33.8169 31.7513 33.8169 30.7631C33.8169 29.7669 33.4136 28.8109 32.6451 28.0075L28.4675 23.5808ZM31.1917 32.0405C31.1841 32.0405 31.1841 32.0486 31.1917 32.0405C30.8949 32.3779 30.5905 32.6832 30.2633 33.0207C29.7687 33.5188 29.2665 34.041 28.7947 34.6275C28.0262 35.4951 27.1207 35.9049 25.9336 35.9049C25.8195 35.9049 25.6977 35.9049 25.5836 35.8968C23.3236 35.7442 21.2234 34.8122 19.6483 34.0169C15.3414 31.8156 11.5595 28.6904 8.41683 24.7296C5.82204 21.4277 4.0871 18.3748 2.93809 15.0969C2.23042 13.0964 1.9717 11.5379 2.08584 10.0676C2.16193 9.12767 2.50436 8.34837 3.13593 7.68155L5.73073 4.94197C6.10358 4.57241 6.49927 4.37156 6.88735 4.37156C7.36674 4.37156 7.75482 4.67685 7.99832 4.93394C8.00593 4.94197 8.01354 4.95001 8.02114 4.95804C8.48532 5.41598 8.92666 5.88998 9.39083 6.39612C9.62672 6.65321 9.87022 6.91029 10.1137 7.17541L12.1911 9.36868C12.9977 10.2203 12.9977 11.0076 12.1911 11.8592C11.9704 12.0922 11.7573 12.3252 11.5367 12.5501C10.8975 13.2411 10.2887 13.8838 9.62672 14.5104C9.6115 14.5265 9.59628 14.5345 9.58867 14.5506C8.93427 15.2415 9.05602 15.9164 9.19299 16.3743C9.2006 16.3984 9.20821 16.4225 9.21582 16.4466C9.75608 17.8284 10.517 19.1299 11.6736 20.6805L11.6812 20.6885C13.7814 23.4201 15.9958 25.5491 18.4384 27.18C18.7504 27.3889 19.0699 27.5576 19.3743 27.7182C19.6483 27.8629 19.907 27.9994 20.1276 28.144C20.1581 28.1601 20.1885 28.1842 20.219 28.2003C20.4777 28.3369 20.7212 28.4011 20.9723 28.4011C21.6039 28.4011 21.9995 27.9834 22.1289 27.8468L24.7313 25.0992C24.99 24.826 25.4009 24.4966 25.8803 24.4966C26.3521 24.4966 26.7402 24.81 26.9761 25.0831C26.9837 25.0911 26.9837 25.0911 26.9913 25.0992L31.1841 29.5259C31.9678 30.3454 31.9678 31.1889 31.1917 32.0405Z"
+                              fill="#0092FF"/>
+                        <path d="M19.4579 9.05442C21.4515 9.40791 23.2626 10.4041 24.7083 11.9306C26.1541 13.457 27.0901 15.3691 27.4325 17.474C27.5162 18.0042 27.9499 18.3738 28.4445 18.3738C28.5054 18.3738 28.5587 18.3658 28.6196 18.3577C29.1826 18.2613 29.5555 17.699 29.4642 17.1044C29.0533 14.5577 27.9119 12.2359 26.1693 10.3961C24.4268 8.55631 22.2277 7.35122 19.8155 6.91738C19.2524 6.82098 18.7274 7.21464 18.6285 7.80112C18.5295 8.3876 18.8948 8.95801 19.4579 9.05442Z"
+                              fill="#0092FF"/>
+                        <path d="M35.9839 16.7914C35.3066 12.5977 33.4347 8.78158 30.5584 5.74475C27.6821 2.70791 24.0676 0.731557 20.0955 0.0165351C19.5401 -0.0879064 19.015 0.313792 18.9161 0.900271C18.8248 1.49478 19.1976 2.04913 19.7607 2.15357C23.3067 2.78825 26.5407 4.56376 29.1126 7.2712C31.6846 9.98668 33.3587 13.4011 33.9598 17.1449C34.0435 17.6752 34.4772 18.0447 34.9718 18.0447C35.0327 18.0447 35.086 18.0367 35.1469 18.0287C35.7023 17.9403 36.0828 17.3779 35.9839 16.7914Z"
+                              fill="#0092FF"/>
+                    </svg>
+                </div>
+                <div class="nav-actions-actions-item-svg-info">
+                    <div class="nav-actions-actions-item-svg-info-text">
+                        Email Support :
+                    </div>
+                    <div class="nav-actions-actions-item-svg-info-link">
+                        info@subsco.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Starseite</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Stadtteile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Leistungen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kontakt
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Uber uns</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex btn-tel">
+                        <a href="tel:84998767788">8 499 876 77 88</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div class="preview">
+            <div class="container">
+                <div class="absolute-text">
+                    <h1 class="preview-title">Engineering your dreams with us</h1>
+                    <div class="preview-text">Our professional team works to increase productivity and cost
+                        effectiveness on the market
+                    </div>
+                    <div class="preview-elems-items justify-evenly">
+                        <div class="d-flex">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="preview-item-text">24/7, 365 Days a Year</div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="preview-item-text">Emergency Locksmith in London</div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="preview-item-text">From £ 39</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-center btn-tel">
+                        <a href="tel:84998767788">8 499 876 77 88</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slider-container">
+            <div class="container">
+
+                <div class="slider-text">Nationwide Service, Local Expertise</div>
+                <h2 class="slider-title">Offer The Latest Software And Solutions To Our customers!</h2>
+
+                <div class="slider-section">
+                    <div class="container-slider">
+                        <div class="slider">
+                            <div class="slider-item">
+                                <div class="slider-item-icon">
+                                    <img src="images/i-slider-key.png" alt="key">
+                                </div>
+                                <h3 class="slider-item-title">Schlüsseldienst</h3>
+                                <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                    ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                    verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                    und schadensfrei.
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-item-icon">
+                                    <img src="images/i-slider-clock.png" alt="clock">
+                                </div>
+                                <h3 class="slider-item-title">Schlüsseldienst</h3>
+                                <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                    ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                    verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                    und schadensfrei.
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-item-icon">
+                                    <img src="images/i-slider-door.png" alt="door">
+                                </div>
+                                <h3 class="slider-item-title">Schlüsseldienst</h3>
+                                <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                    ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                    verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                    und schadensfrei.
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-item-icon">
+                                    <img src="images/i-slider-man.png" alt="man">
+                                </div>
+                                <h3 class="slider-item-title">Schlüsseldienst</h3>
+                                <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                    ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                    verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                    und schadensfrei.
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-item-icon">
+                                    <img src="images/i-slider-car.png" alt="car">
+                                </div>
+                                <h3 class="slider-item-title">Schlüsseldienst</h3>
+                                <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                    ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                    verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                    und schadensfrei.
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-item-icon">
+                                    <img src="images/i-slider-lock.png" alt="lock">
+                                </div>
+                                <h3 class="slider-item-title">Schlüsseldienst</h3>
+                                <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                    ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                    verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                    und schadensfrei.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="slider-second-elems">
+                <div class="row justify-between cart-elems">
+                        <div class="col-lg-3 col-md-6 col-sm-12 slider-second-elems-elem-1">
+                            <div class="container-cart-elems" style="position: absolute">
+                                <div class="slider-second-elem-img">
+                                    <img src="images/i-slider-lock.png" alt="lock">
+                                </div>
+                                <h3 class="slider-second-elem-title">Auto Schlosser</h3>
+                            </div>
+
+                            <div class="hidden-second-elem">
+                                <h3 class="hidden-second-elem-title">Türöffnung</h3>
+                                <p class="hidden-second-elem-text">Neue Schlüssel, öffnen wir alle Arten von Türen, Rufen Sie uns für Probleme mit Heim- und Geschäftstüren an.</p>
+                                <a href="#" class="hidden-second-elem-link">Wieterlesen </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 slider-second-elems-elem-2">
+                            <div class="container-cart-elems" style="position: absolute">
+                                <div class="slider-second-elem-img">
+                                    <img src="images/i-slider-lock.png" alt="lock">
+                                </div>
+                                <h3 class="slider-second-elem-title">Auto Schlosser</h3>
+                            </div>
+
+                            <div class="hidden-second-elem">
+                                <h3 class="hidden-second-elem-title">Schlosstausch Service</h3>
+                                <p class="hidden-second-elem-text">Neue Schlüssel, öffnen wir alle Arten von Türen, Rufen Sie uns für Probleme mit Heim- und Geschäftstüren an.</p>
+                                <a href="#" class="hidden-second-elem-link">Wieterlesen </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 slider-second-elems-elem-3">
+                            <div class="container-cart-elems" style="position: absolute">
+                                <div class="slider-second-elem-img">
+                                    <img src="images/i-slider-lock.png" alt="lock">
+                                </div>
+                                <h3 class="slider-second-elem-title">Auto Schlosser</h3>
+                            </div>
+
+                            <div class="hidden-second-elem">
+                                <h3 class="hidden-second-elem-title">Neue Schlüssel</h3>
+                                <p class="hidden-second-elem-text">Neue Schlüssel, öffnen wir alle Arten von Türen, Rufen Sie uns für Probleme mit Heim- und Geschäftstüren an.</p>
+                                <a href="#" class="hidden-second-elem-link">Wieterlesen </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 slider-second-elems-elem-4">
+                            <div class="container-cart-elems" style="position: absolute">
+                                <div class="slider-second-elem-img">
+                                    <img src="images/i-slider-lock.png" alt="lock">
+                                </div>
+                                <h3 class="slider-second-elem-title">Auto Schlosser</h3>
+                            </div>
+
+                            <div class="hidden-second-elem">
+                                <h3 class="hidden-second-elem-title">Auto Schlosser</h3>
+                                <p class="hidden-second-elem-text">Neue Schlüssel, öffnen wir alle Arten von Türen, Rufen Sie uns für Probleme mit Heim- und Geschäftstüren an.</p>
+                                <a href="#" class="hidden-second-elem-link">Wieterlesen </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="internals">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-mg-12 col-sm-12 mt-auto mb-auto">
+
+                        <h3 class="internals-title">
+                            Notöffnung der Türschlösser:
+                        </h3>
+
+                        <div class="d-flex internals-item">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="internals-item-text">
+                                Notöffnung von Türschlössern
+                            </div>
+                        </div>
+
+                        <div class="d-flex internals-item">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="internals-item-text">
+                                Schnell und rund um die Uhr: 24/7, bis zu 20 Minuten
+                            </div>
+                        </div>
+
+                        <div class="d-flex internals-item">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="internals-item-text">
+                                98% aller Türöffnungen Schadensfrei durchgeführt
+                            </div>
+                        </div>
+
+                        <div class="d-flex internals-item">
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="internals-item-text">
+                                Kompetenter Schlüsseldienst in allen Stadteilen Hamburgs
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img class="internals-img" src="images/internals-img.png" alt="lock">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="feedback">
+            <div class="container">
+                <h1 class="feedback-title">Schlüsseldienst </h1>
+                <div class="feedback-text">Schlüsseldienst Hamburg – ist Ihr Partner, der für Schlossaustausch und
+                    Türöffnung in Hamburg
+                    zuständig ist. Rund um die Uhr stehen Ihnen erfahrene Schlosshandwerker vom Schlüsselnotdienst
+                    Hamburg in allen Bereichen, die Schlüsseldienst benötigen, zur Verfügung. Rufen Sie uns an!
+                </div>
+                <a class="feedback-btn" href="tel:8 4998767788">8 499 876 77 88</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="info">
+            <div class="container">
+                <h1 class="info-title">
+                    Türöffnung vom Schlüsseldienst Hamburg
+                </h1>
+                <div class="info-first">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12 col-sm-12 info-text">
+                            Brauchen Sie in Hamburg einen Schlüsseldienst, weil es sich um eine zugefallene Tür handelt
+                            oder Sie
+                            den Schlüssel verloren haben. Sie haben sich ausgesperrt und können nicht in Ihr Haus oder
+                            in Ihre
+                            Wohnung hinein? Rufen Sie einfach unseren Schlüsselnotdienst Hamburg an und fragen Sie um
+                            eine
+                            Türöffnung. Der Schlüsseldienst Hamburg öffnet zugefallene Türen, wenn der Schlüssel auf der
+                            anderen
+                            Seite der Tür im Schloss steckt, oder auch wenn der Schlüssel abgebrochen ist und sich noch
+                            im
+                            Schließzylinder befindet. Den abgebrochenen Schlüssel entfernt der Schlosser und bald ist
+                            die Tür zu
+                            Ihrer Wohnung oder in Ihr Haus schon offen. Solange es den Schlüsselnotdienst in Hamburg
+                            gibt, ist
+                            die zugefallene Tür kein Grund, sich neben dem eigenen Haus oder der Wohnung obdachlos zu
+                            fühlen.
+                            Sie werden nicht lange vor der Tür stehen müssen. Unser Schlüsseldienst Hamburg ist schnell
+                            vor Ort
+                            und hilft Ihnen.
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <img class="img-info" src="images/young-repairman.png" alt="young-repairman">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-second">
+                    <h1 class="info-title">
+                        Türöffnung vom Schlüsseldienst Hamburg
+                    </h1>
+
+                    <div class="info-text">
+                        Brauchen Sie in Hamburg einen Schlüsseldienst, weil es sich um eine zugefallene Tür handelt oder
+                        Sie den Schlüssel verloren haben. Sie haben sich ausgesperrt und können nicht in Ihr Haus oder
+                        in Ihre Wohnung hinein? Rufen Sie einfach unseren Schlüsselnotdienst Hamburg an und fragen Sie
+                        um eine Türöffnung. Der Schlüsseldienst Hamburg öffnet zugefallene Türen, wenn der Schlüssel auf
+                        der anderen Seite der Tür im Schloss steckt, oder auch wenn der Schlüssel abgebrochen ist und
+                        sich noch im Schließzylinder befindet. Den abgebrochenen Schlüssel entfernt der Schlosser und
+                        bald ist die Tür zu Ihrer Wohnung oder in Ihr Haus schon offen. Solange es den
+                        Schlüsselnotdienst in Hamburg gibt, ist die zugefallene Tür kein Grund, sich neben dem eigenen
+                        Haus oder der Wohnung obdachlos zu fühlen. Sie werden nicht lange vor der Tür stehen müssen.
+                        Unser Schlüsseldienst Hamburg ist schnell vor Ort und hilft Ihnen.
+                    </div>
+                </div>
+
+                <h1 class="info-title">
+                    Schlüsseldienst Hamburg – Schlüsselnotdienst hier und jetzt!
+                </h1>
+                <div class="info-third">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <img class="img-info" src="images/info-lock.png" alt="info-lock">
+                        </div>
+                        <div class="col-lg-7 col-md-12 col-sm-12 info-text">
+                            <p>
+                                Der Schlüsselnotdienst Hamburg ist 24 Stunden am Tag und 7 Tage die Woche, rund um das
+                                Jahr,
+                                für ganz Hamburg und Umgebung zu fairen Preisen erreichbar. Da der Schlüsselnotdienst
+                                Hamburg in allen Gebieten von Hamburg Mitarbeiter hat, ist der Schlüsseldienst schnell
+                                vor
+                                Ort. durchschnittlich braucht unser Fachmann vom Schlüsseldienst Hamburg für die Anfahrt
+                                nur
+                                15–20 Minuten in Hamburg und Umgebung.
+                            </p>
+                            <p>
+                                Ob jetzt nun die Tür zu Ihrer Wohnung zugefallen ist, während sich Ihr Kind noch in der
+                                Wohnung befindet, oder Sie Ihren Schlüssel verloren haben, egal um welche Notfall es
+                                sich
+                                auch handelt – Sie können sich an unseren Schlüsseldienst wenden. Unser 24 Stunden
+                                Schlüsselnotdienst ist stets Einsatz bereit du freut sich über jeden Anruf!
+                            </p>
+                            <p>
+                                Unserem Schlüsselnotdienst Hamburg können Sie alle Arten von Schließanlagen anvertrauen.
+                                Der
+                                Schlüsseldienst Hamburg kümmert sich um alle Schlösser und Schließanlagen. Ihr Schloss
+                                ist
+                                in sicheren Händen, wenn der Schlüsseldienst Hamburg sich um ihn kümmert.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-fourth">
+                    <div class="">
+                        <h1 class="info-title">
+                            Der Schlüsseldienst Hamburg kümmert sich um Ihr Schloss.
+                        </h1>
+
+                        <div class="info-text">
+                            <p>
+                                Ein kaputtes Schloss ist ein guter Grund, den Schlüsseldienst Hamburg zu kontaktieren.
+                                Unser Schlüsseldienst kümmert sich um kaputte Schlösser, die klemmen, krächzen oder
+                                gebrochen sind. Nach der Beauftragung unseres Schlüsseldienstes, stellt der Schlosser
+                                erst mal fest, was mit dem Schloss passiert ist. Nach der kurzen Diagnostik beschließt
+                                der Fachmann, ob das Schloss eine Reparatur vertragen kann, oder ob schon ein neues
+                                Schloss installiert werden muss. Unser Schlüsseldienst in Hamburg beschäftigt sich schon
+                                seit vielen Jahren mit Schlössern und Türen. Die 8 Jahre lange Erfahrung ermöglicht es
+                                unsern Schlüsselnotdienst sich um alle Schließanlagen, Türen und Schlösser zu kümmern.
+                                Egal, ob nun das Tresorschloss oder die Eingangstür kaputt ist – der Schlüsseldienst
+                                Hamburg steht Ihnen zur Seite.
+                            </p>
+
+                            <p>
+                                Wenn Ihr Schloss nicht mehr repariert werden kann, bringt der Schlosser von unserem
+                                Schlüsselnotdienst gerne selbst ein neues Schloss für Sie mit.
+                            </p>
+                        </div>
+                        <div class="btn-tel">
+                            <a href="tel:84998767788">8 499 876 77 88</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="info-title">
+                        Türöffnung vom Schlüsseldienst Hamburg
+                    </h1>
+
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12 col-sm-12 info-text">
+                            Da ein Unglück selten allein kommt bringt ein vorgefallener Einbruch nicht nur Schaden in
+                            Form der gestohlenen Sachen mit. Nach einem Einbruch werden meistens ein beschädigtes
+                            Schloss, zersplittertes Fensterglas und andere Beschädigungen hinterlassen. Ob es sich nun
+                            um Ihr Haus dabei handelt oder um Ihren Arbeitsplatz, Sie brauchen Ihr Räumlichkeit schon in
+                            kürzester Zeit. Schneller Einsatz vom Schlüsselnotdienst ist gefragt. Die Schlosser vom
+                            Schlüsseldienst Hamburg helfen Ihnen schon gleich, nachdem die Polizei sich den Tatort
+                            angeschaut hat. Unser Schlüsselnotdienst Hamburg ist 24 Stunden am Tag erreichbar und ist
+                            bei einem Notfall schon in kürzester Zeit bei Ihnen vor Ort. Der Schlüsselnotdienst entfernt
+                            alle Spuren des Einbruchs, ersetzt die geknackten Schlösser, nimmt eine Notverglasung vor
+                            und sorgt dafür, dass Ihr Büro oder Ihre Wohnstatt schon in einigen Minuten benutzbar ist.
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <img class="img-info" src="images/info-give-keys.png" alt="give-keys">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="feedback">
+            <div class="container">
+                <h1 class="feedback-title">Einbruchschutz und Sicherheitstechnik vom Schlüsseldienst für Hamburg </h1>
+                <div class="feedback-text">
+                    <p>
+                        Der Schlüsseldienst Hamburg steht schon seit ein paar Jahren für Sicherheitstechnik und
+                        Einbruchschutz in Hamburg zur Verfügung. 24 Stunden am Tag, 7 Tage die Woche und 365 Tage im
+                        Jahr
+                        ist der Schlüsselnotdienst Hamburg erreichbar, damit die Hamburger sich mit der
+                        Sicherheitstechnik
+                        von unserem Schlüsseldienst schützen können und die Polizei Hamburg nicht mit mehr Arbeit
+                        belastet
+                        wird. Wenn Sie Sicherheitstechnik und Einbruchschutz für ein Objekt – sei es Betrieb oder
+                        Wohnhaus –
+                        brauchen, rufen Sie einfach unseren Schlüsselnotdienst an. Unser Mitarbeiter fährt zu Ihnen
+                        hinaus
+                        und schaut sich das Objekt vor Ort an. Der Mitarbeiter vom Schlüsseldienst Hamburg berät Sie und
+                        sucht mit Ihnen zusammen die passende Sicherheitstechnik und den Einbruchschutz aus. Der
+                        Schlosser
+                        ersetzt bei Notfall Ihren Schließzylinder durch einen neuen sichereren.
+                    </p>
+
+                    <p>
+                        Sicherheitstechnik und Einbruchschutz dienen vor allem dafür, dass die Einbrecher für die
+                        Öffnung
+                        der Tür viel Zeit verschwenden müssen. Wenn die Diebe bei einfachen Schließanlagen das Schloss
+                        schon
+                        in wenigen Minuten öffnen können, brauchen die Einbrecher bei der Öffnung von sicheren
+                        Schlössern,
+                        die unser Schlüsselnotdienst montiert hat, viel längere Zeit, die sie gewöhnlich nicht haben. Da
+                        die
+                        Zeit nicht still steht, bis sie mit der Öffnung der Tür fertig sind, müssen sie oft das Vorhaben
+                        aufgeben und abhauen. Wenn Sie zu allem noch eine Alarmanlage von den Mitarbeitern vom
+                        Schlüsseldienst Hamburg installieren lassen, können Sie erst recht ruhig sein. Die Alarmanlage
+                        vom
+                        Schlüsselnotdienst wird laut um Hilfe rufen, wenn jemand versucht, Ihre Tür oder Ihr Fenster zu
+                        öffnen. Ob Tag oder Nacht, es findet sich bestimmt jemand aus der Nachbarschaft, der Ihnen
+                        hilft.
+                    </p>
+                </div>
+                <a class="feedback-btn" href="tel:8 4998767788">8 499 876 77 88</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="second-info">
+            <div class="container">
+                <div class="second-info-list">
+                    <h2 class="info-title">
+                        Einbruchschutz und Sicherheitstechnik vom Schlüsseldienst für Hamburg
+                    </h2>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Entsorgung alter Schlösser und Montage von neuen
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Schließzylinderaustausch
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Öffnung von Tresoren, Autotüren, Briefkästen und aller anderen Türen jeder Sicherheitsklasse
+                            aus
+                            jedem Material zum Festpreis
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Sicherheitstechnik und Einbruchschutz zu fairen Preisen
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            24 Stunden Schlüsselnotdienst für Hamburg
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Schnell und rund um die Uhr: 24/7, bis zu 20 Minuten
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Schnelle Anfahrt innerhalb von 15-20 Minuten in Hamburg und Umgebung
+                        </div>
+                    </div>
+
+                    <div class="d-flex internals-item">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="internals-item-text">
+                            Schlüsseldienst Hamburg steht Ihnen mit Rat und Tat zur Seite.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <img class="img-info" src="images/second-ingo-img.png" alt="second-ingo-img">
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 info-text">
+                        <p>
+                            Die Kosten für Leistungen vom Schlüsseldienst Hamburg werden bei Ihnen vor Ort vor
+                            Arbeitsbeginn ausgerechnet. Aus Erfahrung wissen wir, dass genau diese Art der
+                            Kostenberechnung in der Branche vom Schlüsseldienst fair gegenüber den Kunden ist. Der
+                            Mitarbeiter vom Schlüsseldienst Hamburg schaut sich die Lage immer vor Ort an, bevor er
+                            Ihnen den Endpreis nennt. Der Schlüsseldienst muss wissen, aus welchem Grund Sie ausgesperrt
+                            sind; ist Ihre Tür zugefallen, haben Sie den Schlüssel verloren oder vielleicht klemmt der
+                            Schlüssel im Schloss und Sie können die Tür deswegen nicht öffnen. Um den Endpreis
+                            auszurechnen, müssen wir genau wissen, welche Leistungen vom Schlüsselnotdienst gebraucht
+                            werden und um welchen Fall es sich genau handelt. Der am Telefon genannte Endpreis wäre zu
+                            ungenau und wer so einen Preis nennt, hat bestimmt eine böse Überraschung für Sie am Ende
+                            parat.
+                        </p>
+                        <p>
+                            In dem Endpreis wird alles zusammengerechnet inkl. der Anfahrt, dem neuen Schließzylinder,
+                            falls ein Zylinderwechsel nötig ist, der Türöffnung, der Reparatur, oder der Tresoröffnung
+                            und etwaiger anderer Dienstleistung, die Sie in Anspruch genommen haben. Alles ist in dem am
+                            Anfang der Arbeit schon genannten Endpreis inkl. der MwSt enthalten. Bezahlen können Sie
+                            dann bar oder mit der EC-Karte.
+                        </p>
+                        <p>
+                            Es gibt aber Kosten, die bei dem Rund-um-die-Uhr-Schlüsseldienst Hamburg nie berechnet
+                            werden. Wir nehmen keine zusätzlichen Kosten für den Schlüsselnotdienst in der Nacht. Der
+                            Schlüsselnotdienst Hamburg steht Ihnen 24 Stunden am Tag mit den gleichen Bedingungen zur
+                            Seite und hilft Ihnen bei jedem Notfall. Auch wenn Sie sich am Wochenende und an Feiertagen
+                            ausgesperrt haben, ob Sie den Schlüssel verloren haben. Um welchen Notfall es sich auch
+                            handeln mag – wir sind rund um die Uhr erreichbar und helfen Ihnen immer zu den gleichen
+                            Preisen. Unser Schlüsselnotdienst Hamburg ist fair mit unseren Kunden und zieht Sie im
+                            Notfall nicht ab.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="internals">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-mg-12 col-sm-12 mt-auto mb-auto">
+
+                        <h3 class="info-title">
+                            Nothilfe bei versperrten Türen 24/7
+                        </h3>
+
+                        <div class="info-text">
+                            Die Kosten für Leistungen vom Schlüsseldienst Hamburg werden bei Ihnen vor Ort vor
+                            Arbeitsbeginn ausgerechnet. Aus Erfahrung wissen wir, dass genau diese Art der
+                            Kostenberechnung in der Branche vom Schlüsseldienst
+                        </div>
+
+                        <div class="btn-tel">
+                            <a href="tel:84998767788">8 499 876 77 88</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img class="internals-img" src="images/internals-img.png" alt="lock">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="slides">
+            <div class="container">
+                <h2 class="slides-title">Schlüsseldienst für Auto in Hamburg</h2>
+
+                <p class="info-text">Die Fachleute von unserem Hamburger Schlüsseldienst helfen Ihnen, auch wenn Sie die
+                    Türöffnung für
+                    Ihr
+                    Auto brauchen. Wir öffnen Türen von Fahrzeugen, ohne sie zu beschädigen. Wenn Sie den Schlüssel auf
+                    dem
+                    Fahrersitz vergessen haben, kontaktieren Sie unseren Schlüsseldienst. Wir vom Schlüsseldienst
+                    Hamburg
+                    stehen Ihnen zur Seite, auch wenn Sie mal wegen eines Missgeschicks ohne Ihr geliebtes Auto bleiben.
+                    24
+                    Stunden am Tag sind wir bereit, um Türöffnungen für Autos durchzuführen. Alles, was Sie tun müssen,
+                    ist,
+                    uns anzurufen und Ihre Automarke durchzugeben.
+                </p>
+
+                <p class="info-text"> Wenn Sie den Hamburger Schlüsseldienst für Autos brauchen, müssen Sie noch Ihre
+                    Papiere vorweisen.
+                    Damit
+                    wir Ihnen helfen können, müssen wir wissen, dass Sie wirklich der Autoinhaber sind. Ansonsten ist
+                    das
+                    ein Fall für die Polizei. Nachdem Sie uns Ihrer Papiere gezeigt haben, stehen wir zu Ihren Diensten.
+                </p>
+
+                <div class="row carts">
+                    <div class="col-lg-4">
+                        <div class="slider-item">
+                            <div class="slider-item-icon">
+                                <img src="images/i-slider-key.png" alt="key">
+                            </div>
+                            <h3 class="slider-item-title">Schlüsseldienst</h3>
+                            <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                und schadensfrei.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="slider-item">
+                            <div class="slider-item-icon">
+                                <img src="images/i-slider-key.png" alt="key">
+                            </div>
+                            <h3 class="slider-item-title">Schlüsseldienst</h3>
+                            <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                und schadensfrei.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="slider-item">
+                            <div class="slider-item-icon">
+                                <img src="images/i-slider-key.png" alt="key">
+                            </div>
+                            <h3 class="slider-item-title">Schlüsseldienst</h3>
+                            <div class="slider-item-text">Wir sind Ihr Retter im Not wenn Sie sich aus Versehen
+                                ausgesperrt haben, Ihnen die Tür hinterher zugefallen ist oder Sie den Schlüssel
+                                verloren haben. Wir sind ruckzuck bei Ihnen vor Ort. Öffnen jede Tür kostengünstig
+                                und schadensfrei.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="uber-uns">
+                <h2 class="uber-uns-title">
+                    Über Uns
+                </h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p class="uber-uns-text">Wir sind der Hamburger Schlüsseldienst, der über 8 Jahre lang in
+                            ganz
+                            Hamburg tätig ist.
+                            Unsere Einsatzgebiete sind Hamburg Altona, Bergedorf, Eimsbüttel, Hamburg-Mitte,
+                            Hamburg-Nord, Wandsbeck – also alle Gebiete von Hamburg und seine Umgebung.
+                            Nichtsdestotrotz braucht unser Schlüsselnotdienst für Hamburg nicht lange, um Ihnen
+                            helfen zu können. Die durchschnittliche Anfahrtszeit dauert nur 15–20 Minuten. Wir
+                            öffnen Ihnen alle Arten von Schlössern und Türe. Der Hamburger Schlüsseldienst öffnet
+                            nicht nur die Haustür, sondern auch Tresore und Autos. Wir zeichnen uns für die
+                            zerstörungsfreie Türöffnung aus denn 95% aller Türenöffnungen werden schadenfrei
+                            durchführt.
+                            Unser Schlüsseldienst aus Hamburg ist 100% kundenorientiert und fair. Die Kosten werden
+                            Ihnen schon vor der Türöffnung genannt und nicht erst danach. Zuerst werden Sie von uns
+                            über die Kosten aufgeklärt und erst mit Ihrem Einverständnis öffnet der Fachmann die
+                            Tür. Wir wollen Ihnen keine versteckten Kosten andrehen. In dem Endpreis, den der
+                            Schlüsseldienst am Anfang der Arbeit nennt, ist alles enthalten, inkl. der MwSt, der
+                            Kosten für das neue Schloss samt Schlüssel, für die Türöffnung und für jegliche andere
+                            Arbeit, die der Schlüsseldienst bei Ihnen geleistet hat.</p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <img src="images/uber-uns-key.png" alt="uber-uns-img">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="list">
+            <div class="container">
+                <div>
+                    <h2 class="list-title">
+                        Sie sollten den Schlüsseldienst Hamburg rufen:
+                    </h2>
+
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn Sie den Schlüssel ganz verloren haben;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn die Tür zugefallen ist und der Schlüssel in der Wohnung oder im Haus liegt;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn Ihre Tür zugefallen ist und der Schlüssel drinnen im Schließzylinder steckt;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn das Schloss gebrochen ist oder klemmt;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn die Tür vom Fahrzeug zugefallen ist und der Schlüssel auf dem Fahrersitz liegt;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn es Probleme mit dem Schlüssel vom Auto gibt;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn Sie Sicherheitstechnik installieren möchten;
+                                </div>
+                            </div>
+
+                            <div class="d-flex internals-item">
+                                <div>
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="internals-item-text">
+                                    wenn bei Ihnen eingebrochen wurde und die Polizei Hamburg schon vor Ort war.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p class="list-text">
+                        Der Schlüsseldienst Hamburg wartet auf Ihren Anruf. Unser Schlüsselnotdienst aus Hamburg ist
+                        stets einsatzbereit. Der Schlüsseldienst braucht durchschnittlich nur 15–20 Minuten, um in jedem
+                        beliebigen Stadtteil in Hamburg bei Ihnen vor Ort zu sein.
+                    </p>
+
+                    <div class="btn-tel">
+                        <a href="tel:84998767788">8 499 876 77 88</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="keys">
+            <div class="container">
+
+                <h2 class="keys-title">In Diesen Stadtteile Bieten Wir Schlosser-Service An</h2>
+
+                <div class="keys-group">
+                    <div class="">
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex rectangle-container">
+                            <div class="rectangle"></div>
+                            <div class="rectangle-text">
+                                Weiter Sehen
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex rectangle-container">
+                            <div class="rectangle"></div>
+                            <div class="rectangle-text">
+                                Weiter Sehen
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex rectangle-container">
+                            <div class="rectangle"></div>
+                            <div class="rectangle-text">
+                                Weiter Sehen
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex keys-elem">
+                            <i class="fa-solid fa-key"></i>
+                            <span class="keys-elem-text">Allermöhe</span>
+                        </div>
+
+                        <div class="d-flex rectangle-container">
+                            <div class="rectangle"></div>
+                            <div class="rectangle-text">
+                                Weiter Sehen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="form-el">
+            <div class="container">
+                <h2 class="form-el-title">24 Stunden Türöffnungs Service</h2>
+                <p class="form-el-text">
+                    Unser Schlüsseldienst Hamburg steht 24 Stunden am Tag und 7 Tage die Woche für jeden Ihren Notfall
+                    zur Verfügung. Selbst an jeglichen Feiertagen und auch am Samstag und Sonntag. Ausgesperrt oder den
+                    Schlüsselverloren. Mit unseren Leistungen müssen Sie nicht mehr vor verschlossenen Türen stehen.
+                </p>
+                <p class="form-el-text">
+                    Es kann sein dass, Sie nur mal kurz raus gegangen sind um die Post abzuholen, und es fällt einem die
+                    Tür hinterher zu. Und zu all dem sind noch kleine Kinder im Haus. Da das Unglück selten alleine
+                    kommt, ist auch noch der Herd an. Und genau dann kommen wir Ihnen zu Hilfe. Gleich nach der
+                    Beauftragung schicken wir zu Ihnen einen kompetenten Spezialisten, der ruckzuck bei Ihnen vor Ort
+                    sein wird. Schlüsseldienst Hamburg – Ihr Retter in Not!
+                </p>
+
+                <h2 class="form-el-title">Schlüsseldienst mit Erfahrung!</h2>
+                <p class="form-el-text">
+                    Unser Schlüsseldienst Unternehmen zeichnet sich schon seit vielen Jahren mit ausgezeichneter
+                    Qualität und zuverlässigen Experten aus. Unsere Fachmänner werden jedes Jahr immer weiter
+                    fortgebildet und dies ermöglicht es ihnen jede Tür ohne weitere Probleme in kürzester Zeit zu
+                    öffnen. Egal ob Haus-, Wohnungs-, Auto-, Tresoren-, Balkon- oder Terrassentüre, unsere geschulten
+                    experten Schlüsseldienst Hamburg öffnen ihnen kostengünstig jede Tür.
+                </p>
+
+                <div class="form-el-form">
+                    <h2 class="form-el-form-title">Kostenrechner Für Schlüsseldienst</h2>
+                    <h3 class="form-el-form-desc">Türöffnung 08:00 – 20:00 Uhr</h3>
+
+                    <div class="form-el-form-part d-flex">
+                        <input placeholder="Name" type="text">
+                        <input placeholder=" Email" type="text">
+                    </div>
+
+                    <div class="form-el-form-part d-flex">
+                        <input placeholder="Subject" type="text">
+                        <input placeholder=" Address" type="text">
+                    </div>
+
+                    <textarea placeholder="Work description that you want to do.."></textarea>
+
+                    <div style="display: flex; justify-content: center">
+                        <button class="form-el-form-btn" type="submit">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="faq container">
+            <h2 class="faq-title">FAQ</h2>
+
+            <div class="acor-container flex-justy">
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-12 faq-item">
+
+
+                        <input type="radio" name="acor" id="acor1"/>
+                        <label for="acor1">Lorem ipsum dolor sit amet?</label>
+                        <div class="acor-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 faq-item">
+                        <input type="radio" name="acor" id="acor2"/>
+                        <label for="acor2">Lorem ipsum dolor sit amet?</label>
+                        <div class="acor-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 faq-item">
+                        <input type="radio" name="acor" id="acor3"/>
+                        <label for="acor3">Lorem ipsum dolor sit amet?</label>
+                        <div class="acor-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-12 faq-item">
+                        <input type="radio" name="acor" id="acor4"/>
+                        <label for="acor4">Lorem ipsum dolor sit amet?</label>
+                        <div class="acor-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 faq-item">
+                        <input type="radio" name="acor" id="acor5"/>
+                        <label for="acor5">Lorem ipsum dolor sit amet?</label>
+                        <div class="acor-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 faq-item">
+                        <input type="radio" name="acor" id="acor6"/>
+                        <label for="acor6">Lorem ipsum dolor sit amet?</label>
+                        <div class="acor-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer">
+        <div class="container">
+
+            <div class="last-table-services">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="">
+                            <p class="last-table-title">Ihr lokaler Schlüsselnotdienst</p>
+                            <p class="last-table-text">Haben Sie Ihren Schlüssel vergessen oder haben Sie ihn verloren?
+                                Rufen
+                                Sie uns gleich an.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="last-table-btn">
+                            <a class="feedback-btn" href="tel:8 4998767788">8 499 876 77 88</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-inner">
+                <div class="row justify-between">
+
+                    <div class="col-lg-2">
+                        <div class="footer-logo">
+                            <img src="images/footer-logo.png" alt="footer-logo">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="footer-links">
+                            <h3 class="footer-title">Quick Links</h3>
+                            <div class="footer-links-inner">
+                                <div class="footer-links-elems">
+                                    <div>
+                                        <a href="#">Türöffnung</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#">Services</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#">Pricing</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#">Kontakt</a>
+                                    </div>
+                                </div>
+
+                                <div class="footer-links-elems">
+                                    <div>
+                                        <a href="#">Services</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#">Pricing</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="#">Kontakt</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="footer-partner">
+                            <h3 class="footer-title">Unsere Partner</h3>
+                            <div class="footer-partner-links">
+                                <div>
+                                    <a href="#">24h schlüsselnotdienst Berlin</a>
+                                </div>
+
+                                <div>
+                                    <a href="#">24h schlüsselnotdienst Köln</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="footer-contacts">
+                            <h3 class="footer-title">Kontaktinformationen</h3>
+                            <div class="footer-contacts-inner">
+                                <div class="footer-contacts-address">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Abc Strasse 12, 22334, Hamburg</span>
+                                </div>
+
+                                <div class="d-flex phone-container">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div class="phone-links">
+                                        <a href="tel:015792465504">015792465504</a>
+                                        <br/>
+                                        <a href="tel:015792465504">015792465504</a>
+                                        <br/>
+                                        <a href="tel:015792465504">015792465504</a>
+                                        <br/>
+                                        <a href="tel:015792465504">015792465504</a>
+                                        <br/>
+                                        <a href="tel:015792465504">015792465504</a>
+                                    </div>
+                                </div>
+
+                                <div class="footer-contacts-mail">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:info@schluesseldienst-hamburg-tag-und-nacht.dei">info@schluesseldienst-hamburg-tag-und-nacht.dei</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2021. All rights reserved.
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>
